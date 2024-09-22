@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmer Expenses Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main class="flex justify-center">
+        <div class="artboard phone-4 border-2 border-red-500">
+            <h1 class="text-2xl font-bold text-center text-blue-500">Programmer Expenses Assistant</h1>
+            <br>
+            <div class="flex justify-center gap-3">
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Assistant</button>
+            <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">History</button>
+            </div>
+<!-- Calculate part -->
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Income</span>
+                    </label>
+                    <input id="income" type="number" placeholder="Income Amount" class="input input-bordered" required />
+                  </div>
+                  <div class="flex gap-2">
+                    <div class="form-control w-1/2">
+                        <label class="label">
+                          <span class="label-text">Software</span>
+                        </label>
+                        <input id="software" type="number" placeholder="Amount" class="input input-bordered" required />
+                        
+                      </div>
+                      <div class="form-control w-1/2">
+                        <label class="label">
+                          <span class="label-text">Courses</span>
+                        </label>
+                        <input id="courses" type="number" placeholder="Amount" class="input input-bordered" required />
+                        
+                      </div>
+                  </div>
+                  <div class="form-control w-1/2">
+                    <label class="label">
+                      <span class="label-text">Internet</span>
+                    </label>
+                    <input id="internet" type="number" placeholder="Amount" class="input input-bordered" required />
+                    
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="btn-calculate" class="btn btn-primary">Calculate</button>
+                  </div>
+<!-- Savings part -->
+
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Savings(%)</span>
+                    </label>
+                    <input type="number" placeholder="Savings(%)" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control mt-6"></div>
+                    <button class="btn btn-primary">Calculate Savings</button>
+            </div>
+            
+                </form>
+<!-- Result Summary -->
+              <div class="border-2 border-gray-300">
+                <H1 class="text-2xl font-bold text-center text-blue-600">Results Summary</H1>
+                <div class="stats stats-vertical shadow flex">
+                    <div>
+                        <div class="stat">
+                            <div class="stat-title">Total Expenses</div>
+                            <div id="total-expenses" class="stat-value">31K</div>
+                            
+                          </div>
+                        
+                          <div class="stat">
+                            <div class="stat-title">Savings Amount</div>
+                            <div class="stat-value">4,200</div>
+                            
+                          </div>
+                    </div>
+                    <div>
+                        <div class="stat">
+                            <div class="stat-title">Balances</div>
+                            <div id="balance" class="stat-value">31K</div>
+                            
+                          </div>
+                        
+                          <div class="stat">
+                            <div class="stat-title">Remaining Balance</div>
+                            <div class="stat-value">4,200</div>
+                            
+                          </div>
+                    </div>
+                    
+                  </div>
+              </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="./js/calculate.js"></script>
+</body>
+</html>
